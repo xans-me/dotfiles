@@ -1,0 +1,25 @@
+#/usr/bin/env sh
+
+# Reload zshrc
+alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+
+alias pingg='ping google.com' # Ping the biggest search engine
+
+alias mkdir='mkdir -p'            # Make directory with intermediate option
+#alias tmux='tmux -u'              # Start tmux session with UTF-8 checks
+alias hosts='sudo nvim /etc/hosts' # Edit hosts name
+
+# Files and directories
+alias lsd='ls -l | grep "^d"' # List directory only
+alias lsf='ls -l | grep "^-"' # List files only
+alias lsh='ls -ld .??*'       # List hidden files only
+alias lsah='ls -lAh'          # List all files with human readable size format
+alias lst='ls -tl'            # List & order by last modified
+
+# Reset file permission to default
+alias chmod-reset='find . -type d -print0 | xargs -0 chmod 755 && find . -type f -print0 | xargs -0 chmod 644'
+
+# Remove unnecessary files
+alias remove-unnecessary-files="find . -type f \( -name .DS_Store -o -name Thumbs.db \) -print0 | xargs -0 rm"
+
+alias up-dotfile="cp -r ~/.aliases ~/.tmux* ~/.zshrc ~/.gitconfig ~/Sites/private/dotfiles/ && cp -r ~/.config/nvim ~/Sites/private/dotfiles/.config && cd ~/Sites/private/dotfiles && git add . && echo 'dotfile to repo is udpated. Please Commit and Push'"
