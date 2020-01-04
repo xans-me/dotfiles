@@ -2,26 +2,43 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+"Tree Side Pane
 Plug 'scrooloose/nerdtree'
 "Plug 'tsony-tsonev/nerdtree-git-plugin'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
+
+"for git vim
 Plug 'airblade/vim-gitgutter'
+
+
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
+
+"for comment 
 Plug 'scrooloose/nerdcommenter'
+
+"Prettier Formating
 "Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
+"Tmux Navigator
 Plug 'christoomey/vim-tmux-navigator'
 
 " Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-sensible'
+
+"for theme
 Plug 'lifepillar/vim-solarized8'
 Plug 'vim-airline/vim-airline'
 Plug 'hzchirs/vim-material'
 Plug 'vim-airline/vim-airline-themes'
 
+
+"Languange Syntax for highlighting
 Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
 
 " Initialize plugin system
 call plug#end()
@@ -227,6 +244,8 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " Oceanic
 "
+set encoding=UTF-8
+
 set termguicolors
 let &t_8f = "\[38;2;%lu;%lu;%lum"
 let &t_8b = "\[48;2;%lu;%lu;%lum"
@@ -238,5 +257,6 @@ let g:material_style='oceanic'
 set background=dark
 colorscheme vim-material
 let g:airline_theme='material'
+
 
 
