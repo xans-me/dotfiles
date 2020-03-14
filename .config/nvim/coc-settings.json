@@ -1,0 +1,27 @@
+{
+  "suggest.noselect": false,
+  "suggest.echodocSupport": true,
+  "suggest.maxCompleteItemCount": 20,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "javascriptreact",
+    "typescript.tsx",
+    "graphql",
+    "golang"
+  ],
+  "eslint.filetypes": ["javascript", "typescript", "typescriptreact", "javascriptreact", "typescript.tsx"],
+  "diagnostic.errorSign": "•",
+  "diagnostic.warningSign": "•",
+  "diagnostic.infoSign": "•",
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"]
+    }
+  }
+}

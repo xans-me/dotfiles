@@ -1,0 +1,12 @@
+#.inputrc
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+"\e[C": forward-char
+"\e[D": backward-char
+set match-hidden-files off
+set page-completions off
+set completion-query-items 350
+set completion-ignore-case on
+set show-all-if-ambiguous on
+set bell-style none
+TAB: menu-complete

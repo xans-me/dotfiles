@@ -1,0 +1,5 @@
+tsserver.executeAutofix
+snippets.editSnippets
+tsserver.restart
+extensions.forceUpdateAll
+extensions.toggleAutoUpdate

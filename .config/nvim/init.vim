@@ -1,7 +1,7 @@
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 
 "Tree Side Pane
 Plug 'scrooloose/nerdtree'
@@ -21,6 +21,9 @@ Plug 'scrooloose/nerdcommenter'
 
 "Prettier Formating
 "Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+
+" GOlang
+Plug 'fatih/vim-go'
 
 "Tmux Navigator
 Plug 'christoomey/vim-tmux-navigator'
@@ -53,7 +56,7 @@ nmap ++ <plug>NERDCommenterToggle
 "autocmd VimEnter * NERDTree
 
 let g:NERDTreeGitStatusWithFlags = 1
-"let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 "let g:NERDTreeGitStatusNodeColorization = 1
 "let g:NERDTreeColorMapCustom = {
     "\ "Staged"    : "#0ee375",  
@@ -246,6 +249,32 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 "
 set encoding=UTF-8
 
+
+"Golang Configure indentation
+au FileType go set noexpandtab
+au FileType go set shiftwidth=4
+au FileType go set softtabstop=4
+au FileType go set tabstop=4
+
+
+"Golang Code highlighting
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
+let g:go_auto_sameids = 1
+let g:go_highlight_function_parameters = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_variable_declarations = 1
+let g:go_highlight_format_strings = 1
+let g:go_highlight_variable_assignments = 1
+
+let g:go_fmt_command = "goimports"
+
 set termguicolors
 let &t_8f = "\[38;2;%lu;%lu;%lum"
 let &t_8b = "\[48;2;%lu;%lu;%lum"
@@ -257,6 +286,4 @@ let g:material_style='oceanic'
 set background=dark
 colorscheme vim-material
 let g:airline_theme='material'
-
-
 
